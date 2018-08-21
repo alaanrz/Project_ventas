@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		const ventas = [ 500, 700, 300, 470, 300 ];
+
+		function montoVentas() {
+			let total_ventas = 0;
+			for (let i = 0; i < ventas.length; i++) {
+				total_ventas = total_ventas + ventas[i];
+
+			}
+			return total_ventas;
+		}
+		function mensajeUsuario() {
+			let mensajeUsr = "";
+			if (montoVentas() >= 2000)
+				mensajeUsr = "No tiene Gastos de Envio";
+			else
+				mensajeUsr = "Recargo del 10%";
+			return mensajeUsr;
+		}
+
+		alert(mensajeUsuario());
+	</script>
+</body>
+</html>
